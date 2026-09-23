@@ -1605,4 +1605,1402 @@ a:hover {
         max-height: calc(100vh - 16px);
     }
 
+}/* =========================================================
+   DARK THEME
+   ========================================================= */
+
+body[data-theme="dark"] {
+    --page: #0b0f14;
+    --surface: #111820;
+    --surface-soft: #151e28;
+    --text: #f2f5f8;
+    --muted: #9aa8b8;
+    --border: #283442;
+    --shadow: 0 10px 28px rgba(0, 0, 0, 0.35);
 }
+
+body[data-theme="dark"] .sidebar {
+    background: linear-gradient(180deg, #111820 0%, #070b10 100%);
+}
+
+body[data-theme="dark"] .topbar {
+    background: var(--surface);
+    border-color: var(--border);
+}
+
+body[data-theme="dark"] .panel,
+body[data-theme="dark"] .settings-card {
+    background: var(--surface);
+    border-color: var(--border);
+    color: var(--text);
+}
+
+body[data-theme="dark"] input,
+body[data-theme="dark"] select,
+body[data-theme="dark"] textarea {
+    background: #0c1219;
+    color: var(--text);
+    border-color: var(--border);
+}
+
+body[data-theme="dark"] table {
+    background: var(--surface);
+    color: var(--text);
+}
+
+body[data-theme="dark"] th {
+    background: #18222d;
+    color: var(--text);
+}
+
+body[data-theme="dark"] td {
+    border-color: var(--border);
+}
+
+body[data-theme="dark"] .dark-theme-choice span {
+    background: linear-gradient(135deg, #05070a, #394756);
+}
+/* =========================================================
+   DARK THEME - FULL CONTRAST OVERRIDES
+   ========================================================= */
+
+body[data-theme="dark"] {
+    --page: #080c11;
+    --surface: #10161e;
+    --surface-soft: #151d27;
+    --text: #f3f6fa;
+    --muted: #aab6c4;
+    --border: #2b3745;
+    --shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+    background: #080c11 !important;
+    color: #f3f6fa !important;
+}
+
+/* Main containers */
+body[data-theme="dark"] .app,
+body[data-theme="dark"] .main,
+body[data-theme="dark"] .content,
+body[data-theme="dark"] .page,
+body[data-theme="dark"] .page-content,
+body[data-theme="dark"] .dashboard,
+body[data-theme="dark"] .workspace {
+    background: #080c11 !important;
+    color: #f3f6fa !important;
+}
+
+/* Panels and cards */
+body[data-theme="dark"] .panel,
+body[data-theme="dark"] .card,
+body[data-theme="dark"] .settings-card,
+body[data-theme="dark"] .stat-card,
+body[data-theme="dark"] .table-card,
+body[data-theme="dark"] .section-card,
+body[data-theme="dark"] .modal,
+body[data-theme="dark"] .modal-content,
+body[data-theme="dark"] .dialog,
+body[data-theme="dark"] .dropdown-menu,
+body[data-theme="dark"] .menu,
+body[data-theme="dark"] .popover {
+    background: #10161e !important;
+    color: #f3f6fa !important;
+    border-color: #2b3745 !important;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.42) !important;
+}
+
+/* Nested areas that may retain white backgrounds */
+body[data-theme="dark"] .panel *,
+body[data-theme="dark"] .card *,
+body[data-theme="dark"] .settings-card *,
+body[data-theme="dark"] .stat-card *,
+body[data-theme="dark"] .table-card *,
+body[data-theme="dark"] .section-card * {
+    border-color: #2b3745;
+}
+
+/* Headings and normal text */
+body[data-theme="dark"] h1,
+body[data-theme="dark"] h2,
+body[data-theme="dark"] h3,
+body[data-theme="dark"] h4,
+body[data-theme="dark"] h5,
+body[data-theme="dark"] h6,
+body[data-theme="dark"] p,
+body[data-theme="dark"] label,
+body[data-theme="dark"] span,
+body[data-theme="dark"] strong,
+body[data-theme="dark"] small,
+body[data-theme="dark"] li {
+    color: #f3f6fa;
+}
+
+/* Secondary text */
+body[data-theme="dark"] .muted,
+body[data-theme="dark"] .text-muted,
+body[data-theme="dark"] .secondary,
+body[data-theme="dark"] .panel-kicker,
+body[data-theme="dark"] .subtitle,
+body[data-theme="dark"] .description,
+body[data-theme="dark"] .hint {
+    color: #aab6c4 !important;
+}
+
+/* Forms */
+body[data-theme="dark"] input,
+body[data-theme="dark"] select,
+body[data-theme="dark"] textarea {
+    background: #0b1118 !important;
+    color: #f3f6fa !important;
+    border: 1px solid #344252 !important;
+    box-shadow: none !important;
+}
+
+body[data-theme="dark"] input::placeholder,
+body[data-theme="dark"] textarea::placeholder {
+    color: #7f8d9d !important;
+}
+
+body[data-theme="dark"] option {
+    background: #10161e !important;
+    color: #f3f6fa !important;
+}
+
+/* Tables */
+body[data-theme="dark"] table {
+    background: #10161e !important;
+    color: #f3f6fa !important;
+    border-color: #2b3745 !important;
+}
+
+body[data-theme="dark"] thead,
+body[data-theme="dark"] th {
+    background: #18222d !important;
+    color: #f3f6fa !important;
+    border-color: #2b3745 !important;
+}
+
+body[data-theme="dark"] tbody,
+body[data-theme="dark"] tr,
+body[data-theme="dark"] td {
+    background: #10161e !important;
+    color: #e8edf3 !important;
+    border-color: #2b3745 !important;
+}
+
+body[data-theme="dark"] tbody tr:hover,
+body[data-theme="dark"] tbody tr:hover td {
+    background: #18222d !important;
+}
+
+/* Links */
+body[data-theme="dark"] a {
+    color: #58a6ff !important;
+}
+
+/* Buttons */
+body[data-theme="dark"] button {
+    border-color: #344252;
+}
+
+body[data-theme="dark"] .theme-choice,
+body[data-theme="dark"] .theme-choice:hover {
+    background: #151e28 !important;
+    color: #f3f6fa !important;
+    border-color: #344252 !important;
+}
+
+body[data-theme="dark"] .dark-theme-choice {
+    background: #1c2733 !important;
+    color: #ffffff !important;
+    border-color: #58697b !important;
+}
+
+/* Navigation */
+body[data-theme="dark"] .sidebar {
+    background: linear-gradient(180deg, #111820 0%, #06090d 100%) !important;
+    color: #f3f6fa !important;
+}
+
+body[data-theme="dark"] .topbar {
+    background: #10161e !important;
+    color: #f3f6fa !important;
+    border-color: #2b3745 !important;
+}
+
+/* Common white utility/background classes */
+body[data-theme="dark"] .bg-white,
+body[data-theme="dark"] .white-bg,
+body[data-theme="dark"] .background-white,
+body[data-theme="dark"] .surface-white {
+    background: #10161e !important;
+    color: #f3f6fa !important;
+}
+
+/* Inline white backgrounds */
+body[data-theme="dark"] [style*="background:#fff"],
+body[data-theme="dark"] [style*="background: #fff"],
+body[data-theme="dark"] [style*="background:white"],
+body[data-theme="dark"] [style*="background: white"],
+body[data-theme="dark"] [style*="background-color:#fff"],
+body[data-theme="dark"] [style*="background-color: #fff"],
+body[data-theme="dark"] [style*="background-color:white"],
+body[data-theme="dark"] [style*="background-color: white"] {
+    background: #10161e !important;
+    color: #f3f6fa !important;
+}
+
+/* Inline dark text that becomes unreadable */
+body[data-theme="dark"] [style*="color:#000"],
+body[data-theme="dark"] [style*="color: #000"],
+body[data-theme="dark"] [style*="color:black"],
+body[data-theme="dark"] [style*="color: black"] {
+    color: #f3f6fa !important;
+}
+
+/* Checkboxes and radio controls */
+body[data-theme="dark"] input[type="checkbox"],
+body[data-theme="dark"] input[type="radio"] {
+    accent-color: #58a6ff;
+}
+
+/* Badges, chips and tags */
+body[data-theme="dark"] .badge,
+body[data-theme="dark"] .chip,
+body[data-theme="dark"] .tag,
+body[data-theme="dark"] .status,
+body[data-theme="dark"] .status-chip {
+    border-color: #344252;
+}
+
+/* Separators */
+body[data-theme="dark"] hr {
+    border-color: #2b3745 !important;
+}
+
+/* Scrollbars */
+body[data-theme="dark"] ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+body[data-theme="dark"] ::-webkit-scrollbar-track {
+    background: #0b1118;
+}
+
+body[data-theme="dark"] ::-webkit-scrollbar-thumb {
+    background: #344252;
+    border-radius: 10px;
+}
+
+body[data-theme="dark"] ::-webkit-scrollbar-thumb:hover {
+    background: #4a5b6d;
+}
+
+/* Dark theme selector preview */
+body[data-theme="dark"] .dark-theme-choice span {
+    background: linear-gradient(135deg, #05070a, #394756) !important;
+}
+/* =========================================================
+   DARK THEME - REMOVE REMAINING WHITE SURFACES
+   ========================================================= */
+
+body[data-theme="dark"] .sidebar,
+body[data-theme="dark"] .sidebar *,
+body[data-theme="dark"] .sidebar a,
+body[data-theme="dark"] .sidebar button {
+    background-color: transparent;
+}
+
+/* Sidebar itself */
+body[data-theme="dark"] .sidebar {
+    background: linear-gradient(180deg, #111820 0%, #05080c 100%) !important;
+}
+
+/* Navigation items */
+body[data-theme="dark"] .nav-item,
+body[data-theme="dark"] .nav-link,
+body[data-theme="dark"] .sidebar-item,
+body[data-theme="dark"] .menu-item,
+body[data-theme="dark"] .sidebar a {
+    background: transparent !important;
+    color: #dce5ee !important;
+    border-color: transparent !important;
+}
+
+/* Active navigation item */
+body[data-theme="dark"] .nav-item.active,
+body[data-theme="dark"] .nav-link.active,
+body[data-theme="dark"] .sidebar-item.active,
+body[data-theme="dark"] .menu-item.active,
+body[data-theme="dark"] .sidebar a.active,
+body[data-theme="dark"] .sidebar a[aria-current="page"] {
+    background: rgba(255, 255, 255, 0.08) !important;
+    color: #ffffff !important;
+}
+
+/* Navigation hover */
+body[data-theme="dark"] .nav-item:hover,
+body[data-theme="dark"] .nav-link:hover,
+body[data-theme="dark"] .sidebar-item:hover,
+body[data-theme="dark"] .menu-item:hover,
+body[data-theme="dark"] .sidebar a:hover {
+    background: rgba(255, 255, 255, 0.06) !important;
+    color: #ffffff !important;
+}
+
+/* ALL common icon wrappers */
+body[data-theme="dark"] .icon,
+body[data-theme="dark"] .icon-box,
+body[data-theme="dark"] .icon-wrapper,
+body[data-theme="dark"] .nav-icon,
+body[data-theme="dark"] .menu-icon,
+body[data-theme="dark"] .sidebar-icon,
+body[data-theme="dark"] .dashboard-icon,
+body[data-theme="dark"] .feature-icon,
+body[data-theme="dark"] .action-icon,
+body[data-theme="dark"] .stat-icon,
+body[data-theme="dark"] .card-icon {
+    background: transparent !important;
+    background-color: transparent !important;
+    color: #dce5ee !important;
+    border-color: transparent !important;
+    box-shadow: none !important;
+}
+
+/* Remove white square/coat behind SVG icons */
+body[data-theme="dark"] .sidebar svg,
+body[data-theme="dark"] .nav-item svg,
+body[data-theme="dark"] .nav-link svg,
+body[data-theme="dark"] .menu-item svg,
+body[data-theme="dark"] .icon svg,
+body[data-theme="dark"] .icon-box svg,
+body[data-theme="dark"] .icon-wrapper svg,
+body[data-theme="dark"] .nav-icon svg,
+body[data-theme="dark"] .menu-icon svg,
+body[data-theme="dark"] .dashboard-icon svg {
+    background: transparent !important;
+    color: #dce5ee !important;
+    fill: currentColor;
+}
+
+/* SVG containers and image containers */
+body[data-theme="dark"] svg,
+body[data-theme="dark"] svg *,
+body[data-theme="dark"] img,
+body[data-theme="dark"] .icon img,
+body[data-theme="dark"] .icon-box img,
+body[data-theme="dark"] .icon-wrapper img {
+    background-color: transparent !important;
+}
+
+/* Prevent SVG white fills from appearing as coats */
+body[data-theme="dark"] .sidebar svg rect[fill="white"],
+body[data-theme="dark"] .sidebar svg rect[fill="#fff"],
+body[data-theme="dark"] .sidebar svg rect[fill="#ffffff"],
+body[data-theme="dark"] .sidebar svg path[fill="white"],
+body[data-theme="dark"] .sidebar svg path[fill="#fff"],
+body[data-theme="dark"] .sidebar svg path[fill="#ffffff"] {
+    fill: transparent !important;
+}
+
+/* Dashboard / home area */
+body[data-theme="dark"] .dashboard,
+body[data-theme="dark"] .dashboard-header,
+body[data-theme="dark"] .dashboard-content,
+body[data-theme="dark"] .dashboard-card,
+body[data-theme="dark"] .dashboard-panel {
+    background: transparent !important;
+}
+
+/* Remove common white containers */
+body[data-theme="dark"] .white,
+body[data-theme="dark"] .bg-white,
+body[data-theme="dark"] .bg-light,
+body[data-theme="dark"] .light-bg,
+body[data-theme="dark"] .white-bg,
+body[data-theme="dark"] .surface,
+body[data-theme="dark"] .surface-white,
+body[data-theme="dark"] .background-white {
+    background: #10161e !important;
+    color: #f3f6fa !important;
+}
+
+/* Common Bootstrap-style white backgrounds */
+body[data-theme="dark"] .bg-light,
+body[data-theme="dark"] .card-header,
+body[data-theme="dark"] .card-footer {
+    background: #151d27 !important;
+    color: #f3f6fa !important;
+}
+
+/* Topbar controls */
+body[data-theme="dark"] .topbar *,
+body[data-theme="dark"] .topbar button,
+body[data-theme="dark"] .topbar .icon,
+body[data-theme="dark"] .topbar .icon-box {
+    background-color: transparent !important;
+}
+
+/* Search boxes and controls */
+body[data-theme="dark"] .search,
+body[data-theme="dark"] .search-box,
+body[data-theme="dark"] .search-container {
+    background: #0b1118 !important;
+    border-color: #344252 !important;
+}
+
+/* Tooltips */
+body[data-theme="dark"] [role="tooltip"],
+body[data-theme="dark"] .tooltip,
+body[data-theme="dark"] .tooltip-inner {
+    background: #18222d !important;
+    color: #ffffff !important;
+}
+
+/* Modal overlays */
+body[data-theme="dark"] .overlay,
+body[data-theme="dark"] .modal-backdrop {
+    background: rgba(0, 0, 0, 0.72) !important;
+}
+
+/* Tables and table controls */
+body[data-theme="dark"] .table-responsive,
+body[data-theme="dark"] .table-container {
+    background: #10161e !important;
+}
+
+/* Prevent white rows inside cards */
+body[data-theme="dark"] .list,
+body[data-theme="dark"] .list-item,
+body[data-theme="dark"] .record,
+body[data-theme="dark"] .record-row,
+body[data-theme="dark"] .research-row {
+    background: #10161e !important;
+    color: #e8edf3 !important;
+    border-color: #2b3745 !important;
+}
+
+/* White separators and outlines */
+body[data-theme="dark"] .border,
+body[data-theme="dark"] .divider,
+body[data-theme="dark"] .separator {
+    border-color: #2b3745 !important;
+}
+
+/* Buttons which have white backgrounds */
+body[data-theme="dark"] button:not(.btn-primary):not(.btn-danger):not(.btn-success):not(.btn-warning) {
+    color: #e8edf3;
+}
+
+/* Native browser controls */
+body[data-theme="dark"] input,
+body[data-theme="dark"] select,
+body[data-theme="dark"] textarea,
+body[data-theme="dark"] button {
+    color-scheme: dark;
+}
+
+/* Force the page-level white canvas away */
+html:has(body[data-theme="dark"]),
+body[data-theme="dark"],
+body[data-theme="dark"] #app,
+body[data-theme="dark"] #root {
+    background-color: #080c11 !important;
+}
+
+/* Catch fixed inline white backgrounds */
+body[data-theme="dark"] [style*="background-color: rgb(255, 255, 255)"],
+body[data-theme="dark"] [style*="background-color:rgb(255,255,255)"],
+body[data-theme="dark"] [style*="background: rgb(255, 255, 255)"],
+body[data-theme="dark"] [style*="background:rgb(255,255,255)"] {
+    background: #10161e !important;
+}
+
+/* Catch white borders */
+body[data-theme="dark"] [style*="border-color: rgb(255, 255, 255)"],
+body[data-theme="dark"] [style*="border-color:rgb(255,255,255)"] {
+    border-color: #2b3745 !important;
+}
+
+/* Final protection against pure white surfaces */
+body[data-theme="dark"] div[style*="#ffffff"],
+body[data-theme="dark"] section[style*="#ffffff"],
+body[data-theme="dark"] article[style*="#ffffff"],
+body[data-theme="dark"] header[style*="#ffffff"],
+body[data-theme="dark"] aside[style*="#ffffff"] {
+    background-color: #10161e !important;
+}
+
+/* Dark theme icon appearance */
+body[data-theme="dark"] .dark-theme-choice span {
+    background: linear-gradient(135deg, #05070a, #394756) !important;
+}
+/* =========================================================
+   DARK THEME - COLORFUL DATA-SAFE UI
+   ========================================================= */
+
+/* ---------- Base ---------- */
+
+body[data-theme="dark"] {
+    --page: #070b12;
+    --surface: #101722;
+    --surface-soft: #151e2b;
+    --text: #f7f9fc;
+    --muted: #aeb9c8;
+    --border: #29384a;
+
+    background: #070b12 !important;
+    color: #f7f9fc !important;
+}
+
+/* ---------- Main dashboard ---------- */
+
+body[data-theme="dark"] .main,
+body[data-theme="dark"] .content,
+body[data-theme="dark"] .page,
+body[data-theme="dark"] .page-content,
+body[data-theme="dark"] .dashboard,
+body[data-theme="dark"] .workspace {
+    background:
+        radial-gradient(circle at 8% 8%, rgba(22, 131, 255, .10), transparent 28%),
+        radial-gradient(circle at 92% 12%, rgba(255, 59, 77, .08), transparent 26%),
+        radial-gradient(circle at 70% 90%, rgba(25, 201, 121, .07), transparent 28%),
+        #070b12 !important;
+
+    color: #f7f9fc !important;
+}
+
+/* ---------- Sidebar ---------- */
+
+body[data-theme="dark"] .sidebar {
+    background:
+        linear-gradient(
+            180deg,
+            #111a29 0%,
+            #101525 35%,
+            #11101f 68%,
+            #080b12 100%
+        ) !important;
+
+    border-right: 1px solid #26354a !important;
+}
+
+/* ---------- Navigation colors ---------- */
+
+body[data-theme="dark"] .sidebar a,
+body[data-theme="dark"] .nav-item,
+body[data-theme="dark"] .nav-link,
+body[data-theme="dark"] .menu-item {
+    background: transparent !important;
+    color: #cbd5e1 !important;
+}
+
+body[data-theme="dark"] .sidebar a:hover,
+body[data-theme="dark"] .nav-item:hover,
+body[data-theme="dark"] .nav-link:hover,
+body[data-theme="dark"] .menu-item:hover {
+    background: rgba(22, 131, 255, .14) !important;
+    color: #ffffff !important;
+}
+
+body[data-theme="dark"] .sidebar a.active,
+body[data-theme="dark"] .nav-item.active,
+body[data-theme="dark"] .nav-link.active,
+body[data-theme="dark"] .menu-item.active {
+    background:
+        linear-gradient(
+            90deg,
+            rgba(22, 131, 255, .22),
+            rgba(168, 85, 247, .12)
+        ) !important;
+
+    color: #ffffff !important;
+
+    border-left: 3px solid #1683ff !important;
+}
+
+/* ---------- Colorful icon containers ---------- */
+
+body[data-theme="dark"] .icon,
+body[data-theme="dark"] .icon-box,
+body[data-theme="dark"] .icon-wrapper,
+body[data-theme="dark"] .nav-icon,
+body[data-theme="dark"] .menu-icon,
+body[data-theme="dark"] .sidebar-icon,
+body[data-theme="dark"] .dashboard-icon,
+body[data-theme="dark"] .feature-icon,
+body[data-theme="dark"] .action-icon,
+body[data-theme="dark"] .stat-icon,
+body[data-theme="dark"] .card-icon {
+    background: rgba(22, 131, 255, .10) !important;
+    color: #58a6ff !important;
+    border: 1px solid rgba(88, 166, 255, .18) !important;
+    box-shadow: none !important;
+}
+
+/* ---------- Panels ---------- */
+
+body[data-theme="dark"] .panel,
+body[data-theme="dark"] .card,
+body[data-theme="dark"] .settings-card,
+body[data-theme="dark"] .stat-card,
+body[data-theme="dark"] .table-card,
+body[data-theme="dark"] .section-card {
+    background:
+        linear-gradient(
+            145deg,
+            #111a27,
+            #0e151f
+        ) !important;
+
+    color: #f7f9fc !important;
+    border: 1px solid #29384a !important;
+    box-shadow:
+        0 10px 30px rgba(0, 0, 0, .30) !important;
+}
+
+/* ---------- Dashboard statistics ---------- */
+
+body[data-theme="dark"] .stat-card:nth-child(4n+1) {
+    border-top: 3px solid #1683ff !important;
+}
+
+body[data-theme="dark"] .stat-card:nth-child(4n+2) {
+    border-top: 3px solid #ff3b4d !important;
+}
+
+body[data-theme="dark"] .stat-card:nth-child(4n+3) {
+    border-top: 3px solid #19c979 !important;
+}
+
+body[data-theme="dark"] .stat-card:nth-child(4n+4) {
+    border-top: 3px solid #ffc928 !important;
+}
+
+/* ---------- Calendar ---------- */
+
+body[data-theme="dark"] .calendar,
+body[data-theme="dark"] .calendar-container,
+body[data-theme="dark"] .calendar-card,
+body[data-theme="dark"] .calendar-grid,
+body[data-theme="dark"] .calendar-header,
+body[data-theme="dark"] .calendar-body {
+    background: #101722 !important;
+    color: #f7f9fc !important;
+    border-color: #29384a !important;
+}
+
+/* Calendar cells */
+body[data-theme="dark"] .calendar-day,
+body[data-theme="dark"] .calendar-cell,
+body[data-theme="dark"] .calendar-grid > *,
+body[data-theme="dark"] .day {
+    background: #111a26 !important;
+    color: #eaf0f6 !important;
+    border-color: #29384a !important;
+}
+
+/* Calendar hover */
+body[data-theme="dark"] .calendar-day:hover,
+body[data-theme="dark"] .calendar-cell:hover,
+body[data-theme="dark"] .day:hover {
+    background: rgba(22, 131, 255, .18) !important;
+    color: #ffffff !important;
+}
+
+/* Current day */
+body[data-theme="dark"] .today,
+body[data-theme="dark"] .calendar-day.today,
+body[data-theme="dark"] .calendar-cell.today {
+    background: rgba(255, 201, 40, .16) !important;
+    color: #ffe58a !important;
+    border-color: #ffc928 !important;
+}
+
+/* Calendar headings */
+body[data-theme="dark"] .calendar th,
+body[data-theme="dark"] .calendar-header,
+body[data-theme="dark"] .calendar-weekday {
+    background: #182435 !important;
+    color: #8fc5ff !important;
+}
+
+/* ---------- Overdue section ---------- */
+
+body[data-theme="dark"] .overdue,
+body[data-theme="dark"] .overdue-section,
+body[data-theme="dark"] .overdue-card,
+body[data-theme="dark"] .deadline-section {
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 59, 77, .12),
+            #101722
+        ) !important;
+
+    color: #f7f9fc !important;
+    border-color: rgba(255, 59, 77, .35) !important;
+}
+
+/* Overdue records */
+body[data-theme="dark"] .overdue-item,
+body[data-theme="dark"] .overdue-row,
+body[data-theme="dark"] .deadline-item,
+body[data-theme="dark"] .rt-deadline-overdue {
+    background: rgba(255, 59, 77, .10) !important;
+    color: #ffb4bd !important;
+    border-color: rgba(255, 59, 77, .28) !important;
+}
+
+/* Due soon */
+body[data-theme="dark"] .rt-deadline-soon {
+    background: rgba(255, 201, 40, .12) !important;
+    color: #ffe28a !important;
+    border-color: rgba(255, 201, 40, .30) !important;
+}
+
+/* Due today */
+body[data-theme="dark"] .rt-deadline-today {
+    background: rgba(168, 85, 247, .14) !important;
+    color: #d9b8ff !important;
+    border-color: rgba(168, 85, 247, .35) !important;
+}
+
+/* Normal deadline */
+body[data-theme="dark"] .rt-deadline-normal {
+    background: rgba(25, 201, 121, .10) !important;
+    color: #8df0bf !important;
+    border-color: rgba(25, 201, 121, .25) !important;
+}
+
+/* ---------- Data Management ---------- */
+
+body[data-theme="dark"] .data-management,
+body[data-theme="dark"] .data-management-section,
+body[data-theme="dark"] .data-management-card,
+body[data-theme="dark"] .data-card,
+body[data-theme="dark"] .import-export,
+body[data-theme="dark"] .backup-section {
+    background:
+        linear-gradient(
+            145deg,
+            #111a27,
+            #0e151f
+        ) !important;
+
+    color: #f7f9fc !important;
+    border-color: #29384a !important;
+}
+
+/* Data Management buttons */
+body[data-theme="dark"] .data-management button,
+body[data-theme="dark"] .import-export button,
+body[data-theme="dark"] .backup-section button {
+    background: #172333 !important;
+    color: #f5f8fb !important;
+    border-color: #34465a !important;
+}
+
+body[data-theme="dark"] .data-management button:hover,
+body[data-theme="dark"] .import-export button:hover,
+body[data-theme="dark"] .backup-section button:hover {
+    background: rgba(22, 131, 255, .18) !important;
+    border-color: #1683ff !important;
+}
+
+/* ---------- Tables ---------- */
+
+body[data-theme="dark"] table,
+body[data-theme="dark"] .table,
+body[data-theme="dark"] .table-container,
+body[data-theme="dark"] .table-responsive {
+    background: #101722 !important;
+    color: #eef3f8 !important;
+    border-color: #29384a !important;
+}
+
+body[data-theme="dark"] thead,
+body[data-theme="dark"] th {
+    background:
+        linear-gradient(
+            90deg,
+            #182638,
+            #172132
+        ) !important;
+
+    color: #8fc5ff !important;
+    border-color: #29384a !important;
+}
+
+body[data-theme="dark"] tbody tr,
+body[data-theme="dark"] tbody td {
+    background: #101722 !important;
+    color: #e9eef4 !important;
+    border-color: #29384a !important;
+}
+
+body[data-theme="dark"] tbody tr:nth-child(even),
+body[data-theme="dark"] tbody tr:nth-child(even) td {
+    background: #121b27 !important;
+}
+
+body[data-theme="dark"] tbody tr:hover,
+body[data-theme="dark"] tbody tr:hover td {
+    background: rgba(22, 131, 255, .10) !important;
+    color: #ffffff !important;
+}
+
+/* ---------- Forms ---------- */
+
+body[data-theme="dark"] input,
+body[data-theme="dark"] select,
+body[data-theme="dark"] textarea {
+    background: #0b1119 !important;
+    color: #f4f7fa !important;
+    border: 1px solid #34465a !important;
+}
+
+body[data-theme="dark"] input:focus,
+body[data-theme="dark"] select:focus,
+body[data-theme="dark"] textarea:focus {
+    border-color: #1683ff !important;
+    box-shadow: 0 0 0 2px rgba(22, 131, 255, .14) !important;
+}
+
+body[data-theme="dark"] input::placeholder,
+body[data-theme="dark"] textarea::placeholder {
+    color: #718096 !important;
+}
+
+/* ---------- Status colors ---------- */
+
+body[data-theme="dark"] .rt-status-chip {
+    background: #182333 !important;
+    color: #f4f7fa !important;
+    border-color: #34465a !important;
+}
+
+/* ---------- Tags ---------- */
+
+body[data-theme="dark"] .rt-tag {
+    color: #ffffff !important;
+    border-color: rgba(88, 166, 255, .35) !important;
+    background: rgba(22, 131, 255, .14) !important;
+}
+
+/* ---------- Links ---------- */
+
+body[data-theme="dark"] a {
+    color: #62b0ff !important;
+}
+
+body[data-theme="dark"] a:hover {
+    color: #8bc7ff !important;
+}
+
+/* ---------- White icon/image coats ---------- */
+
+body[data-theme="dark"] .sidebar img,
+body[data-theme="dark"] .sidebar svg,
+body[data-theme="dark"] .nav-icon,
+body[data-theme="dark"] .dashboard-icon {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* ---------- Remove white surfaces from generic elements ---------- */
+
+body[data-theme="dark"] .white,
+body[data-theme="dark"] .white-bg,
+body[data-theme="dark"] .bg-white,
+body[data-theme="dark"] .background-white {
+    background: #101722 !important;
+    color: #f7f9fc !important;
+}
+
+/* ---------- Theme choices ---------- */
+
+body[data-theme="dark"] .theme-choice {
+    background: #121c29 !important;
+    color: #eef3f8 !important;
+    border-color: #34465a !important;
+}
+
+body[data-theme="dark"] .theme-choice:hover {
+    background: #1a2a3d !important;
+    border-color: #58a6ff !important;
+}
+
+body[data-theme="dark"] .dark-theme-choice {
+    background:
+        linear-gradient(
+            135deg,
+            #171f2d,
+            #25203b
+        ) !important;
+
+    color: #ffffff !important;
+    border-color: #a855f7 !important;
+}
+
+/* ---------- Preserve colorful primary actions ---------- */
+
+body[data-theme="dark"] .btn-primary,
+body[data-theme="dark"] button.primary,
+body[data-theme="dark"] .primary-button {
+    background: #1683ff !important;
+    color: #ffffff !important;
+}
+
+body[data-theme="dark"] .btn-danger,
+body[data-theme="dark"] button.danger,
+body[data-theme="dark"] .danger-button {
+    background: #ff3b4d !important;
+    color: #ffffff !important;
+}
+
+body[data-theme="dark"] .btn-success,
+body[data-theme="dark"] button.success,
+body[data-theme="dark"] .success-button {
+    background: #19c979 !important;
+    color: #06140d !important;
+}
+
+body[data-theme="dark"] .btn-warning,
+body[data-theme="dark"] button.warning,
+body[data-theme="dark"] .warning-button {
+    background: #ffc928 !important;
+    color: #171000 !important;
+}
+
+/* ---------- Text contrast protection ---------- */
+
+body[data-theme="dark"] .panel *,
+body[data-theme="dark"] .card *,
+body[data-theme="dark"] .calendar *,
+body[data-theme="dark"] .overdue *,
+body[data-theme="dark"] .data-management * {
+    text-shadow: none;
+}
+
+/* ---------- Global white surface protection ---------- */
+
+body[data-theme="dark"] div,
+body[data-theme="dark"] section,
+body[data-theme="dark"] article,
+body[data-theme="dark"] aside,
+body[data-theme="dark"] header,
+body[data-theme="dark"] footer {
+    border-color: inherit;
+}
+
+/* Only convert genuinely white computed-looking utility surfaces,
+   while leaving colorful components untouched. */
+body[data-theme="dark"] [style*="background:#fff"],
+body[data-theme="dark"] [style*="background: #fff"],
+body[data-theme="dark"] [style*="background:#ffffff"],
+body[data-theme="dark"] [style*="background: #ffffff"],
+body[data-theme="dark"] [style*="background:white"],
+body[data-theme="dark"] [style*="background: white"] {
+    background: #101722 !important;
+    color: #f7f9fc !important;
+}
+/* =========================================================
+   DARK THEME - PRIORITY / STATUS / DEADLINE / SETTINGS
+   FINAL WHITE-SURFACE FIX
+   ========================================================= */
+
+/* ---------- Research table cells ---------- */
+
+body[data-theme="dark"] td,
+body[data-theme="dark"] th {
+    background-color: #101722 !important;
+    color: #edf3f8 !important;
+}
+
+/* Priority column and priority content */
+body[data-theme="dark"] [class*="priority"],
+body[data-theme="dark"] [id*="priority"],
+body[data-theme="dark"] .priority-cell,
+body[data-theme="dark"] .priority-badge,
+body[data-theme="dark"] .priority-chip,
+body[data-theme="dark"] .priority-label {
+    background-color: #101722 !important;
+    color: #f1f5f9 !important;
+}
+
+/* Keep priority badges colorful */
+body[data-theme="dark"] .priority-high,
+body[data-theme="dark"] [class*="priority"][class*="high"] {
+    background: rgba(255, 59, 77, .16) !important;
+    color: #ff9da8 !important;
+    border-color: rgba(255, 59, 77, .38) !important;
+}
+
+body[data-theme="dark"] .priority-medium,
+body[data-theme="dark"] [class*="priority"][class*="medium"] {
+    background: rgba(255, 201, 40, .16) !important;
+    color: #ffe28a !important;
+    border-color: rgba(255, 201, 40, .38) !important;
+}
+
+body[data-theme="dark"] .priority-low,
+body[data-theme="dark"] [class*="priority"][class*="low"] {
+    background: rgba(25, 201, 121, .14) !important;
+    color: #8df0bf !important;
+    border-color: rgba(25, 201, 121, .34) !important;
+}
+
+/* ---------- Status ---------- */
+
+body[data-theme="dark"] [class*="status"],
+body[data-theme="dark"] [id*="status"],
+body[data-theme="dark"] .status-cell,
+body[data-theme="dark"] .status-badge,
+body[data-theme="dark"] .status-chip,
+body[data-theme="dark"] .rt-status-chip {
+    background-color: #101722 !important;
+    color: #edf3f8 !important;
+}
+
+/* Status colors */
+body[data-theme="dark"] [class*="status"][class*="published"],
+body[data-theme="dark"] [class*="status"][class*="complete"],
+body[data-theme="dark"] [class*="status"][class*="accepted"] {
+    background: rgba(25, 201, 121, .14) !important;
+    color: #8df0bf !important;
+    border-color: rgba(25, 201, 121, .34) !important;
+}
+
+body[data-theme="dark"] [class*="status"][class*="pending"],
+body[data-theme="dark"] [class*="status"][class*="review"],
+body[data-theme="dark"] [class*="status"][class*="progress"] {
+    background: rgba(22, 131, 255, .14) !important;
+    color: #8fc5ff !important;
+    border-color: rgba(22, 131, 255, .34) !important;
+}
+
+body[data-theme="dark"] [class*="status"][class*="reject"],
+body[data-theme="dark"] [class*="status"][class*="failed"] {
+    background: rgba(255, 59, 77, .14) !important;
+    color: #ff9da8 !important;
+    border-color: rgba(255, 59, 77, .34) !important;
+}
+
+/* ---------- Deadline ---------- */
+
+body[data-theme="dark"] [class*="deadline"],
+body[data-theme="dark"] [id*="deadline"],
+body[data-theme="dark"] .deadline-cell,
+body[data-theme="dark"] .deadline-box,
+body[data-theme="dark"] .deadline-badge,
+body[data-theme="dark"] .deadline-chip {
+    background-color: #101722 !important;
+    color: #edf3f8 !important;
+}
+
+/* Overdue */
+body[data-theme="dark"] [class*="overdue"] {
+    background: rgba(255, 59, 77, .12) !important;
+    color: #ffabb5 !important;
+    border-color: rgba(255, 59, 77, .32) !important;
+}
+
+/* Today */
+body[data-theme="dark"] [class*="today"] {
+    background: rgba(168, 85, 247, .14) !important;
+    color: #d7b5ff !important;
+    border-color: rgba(168, 85, 247, .32) !important;
+}
+
+/* Soon */
+body[data-theme="dark"] [class*="soon"] {
+    background: rgba(255, 201, 40, .13) !important;
+    color: #ffe28a !important;
+    border-color: rgba(255, 201, 40, .32) !important;
+}
+
+/* Normal */
+body[data-theme="dark"] [class*="deadline-normal"] {
+    background: rgba(25, 201, 121, .11) !important;
+    color: #8df0bf !important;
+    border-color: rgba(25, 201, 121, .30) !important;
+}
+
+/* ---------- Data Management settings ---------- */
+
+body[data-theme="dark"] .settings,
+body[data-theme="dark"] .settings-panel,
+body[data-theme="dark"] .settings-section,
+body[data-theme="dark"] .settings-container,
+body[data-theme="dark"] .settings-card,
+body[data-theme="dark"] [class*="settings"] {
+    background: #101722 !important;
+    color: #f3f6fa !important;
+    border-color: #29384a !important;
+}
+
+/* Settings rows */
+body[data-theme="dark"] .settings-row,
+body[data-theme="dark"] .setting-row,
+body[data-theme="dark"] .setting-item,
+body[data-theme="dark"] .settings-item {
+    background: #121b27 !important;
+    color: #edf3f8 !important;
+    border-color: #29384a !important;
+}
+
+/* Settings headings */
+body[data-theme="dark"] .settings h1,
+body[data-theme="dark"] .settings h2,
+body[data-theme="dark"] .settings h3,
+body[data-theme="dark"] .settings h4,
+body[data-theme="dark"] .settings label,
+body[data-theme="dark"] [class*="settings"] h1,
+body[data-theme="dark"] [class*="settings"] h2,
+body[data-theme="dark"] [class*="settings"] h3,
+body[data-theme="dark"] [class*="settings"] h4,
+body[data-theme="dark"] [class*="settings"] label {
+    color: #f7f9fc !important;
+}
+
+/* Settings controls */
+body[data-theme="dark"] .settings input,
+body[data-theme="dark"] .settings select,
+body[data-theme="dark"] .settings textarea,
+body[data-theme="dark"] [class*="settings"] input,
+body[data-theme="dark"] [class*="settings"] select,
+body[data-theme="dark"] [class*="settings"] textarea {
+    background: #0b1119 !important;
+    color: #f3f6fa !important;
+    border-color: #34465a !important;
+}
+
+/* ---------- Data management cards ---------- */
+
+body[data-theme="dark"] [class*="data-management"],
+body[data-theme="dark"] [id*="data-management"],
+body[data-theme="dark"] [class*="data-management"] *,
+body[data-theme="dark"] [id*="data-management"] * {
+    border-color: #29384a;
+}
+
+/* Prevent children from creating white coats */
+body[data-theme="dark"] [class*="data-management"] > div,
+body[data-theme="dark"] [class*="data-management"] > section,
+body[data-theme="dark"] [class*="data-management"] > article {
+    background-color: #101722 !important;
+    color: #edf3f8 !important;
+}
+
+/* ---------- White utility surfaces ---------- */
+
+body[data-theme="dark"] .form-control,
+body[data-theme="dark"] .form-select,
+body[data-theme="dark"] .input-group,
+body[data-theme="dark"] .input-group-text,
+body[data-theme="dark"] .form-group,
+body[data-theme="dark"] .form-row {
+    background: #101722 !important;
+    color: #edf3f8 !important;
+    border-color: #29384a !important;
+}
+
+/* ---------- Final fixed-white removal ---------- */
+
+body[data-theme="dark"] [style*="background-color: white"],
+body[data-theme="dark"] [style*="background-color:white"],
+body[data-theme="dark"] [style*="background-color: #fff"],
+body[data-theme="dark"] [style*="background-color:#fff"],
+body[data-theme="dark"] [style*="background-color: #ffffff"],
+body[data-theme="dark"] [style*="background-color:#ffffff"],
+body[data-theme="dark"] [style*="background: white"],
+body[data-theme="dark"] [style*="background:white"],
+body[data-theme="dark"] [style*="background: #fff"],
+body[data-theme="dark"] [style*="background:#fff"],
+body[data-theme="dark"] [style*="background: #ffffff"],
+body[data-theme="dark"] [style*="background:#ffffff"] {
+    background: #101722 !important;
+    color: #edf3f8 !important;
+}
+
+/* ---------- Keep colorful accents ---------- */
+
+body[data-theme="dark"] .blue,
+body[data-theme="dark"] .blue-theme,
+body[data-theme="dark"] .accent-blue {
+    color: #58a6ff !important;
+}
+
+body[data-theme="dark"] .red,
+body[data-theme="dark"] .red-theme,
+body[data-theme="dark"] .accent-red {
+    color: #ff7f8c !important;
+}
+
+body[data-theme="dark"] .green,
+body[data-theme="dark"] .green-theme,
+body[data-theme="dark"] .accent-green {
+    color: #65e6a3 !important;
+}
+
+body[data-theme="dark"] .yellow,
+body[data-theme="dark"] .yellow-theme,
+body[data-theme="dark"] .accent-yellow {
+    color: #ffe27a !important;
+}
+
+body[data-theme="dark"] .pink,
+body[data-theme="dark"] .pink-theme,
+body[data-theme="dark"] .accent-pink {
+    color: #f5a7d7 !important;
+}
+
+/* ============================================================
+   FINAL BADGE COLOR SYSTEM
+   Removes white badge backgrounds and restores clear colors.
+   ============================================================ */
+
+body[data-theme="dark"] .badge,
+body[data-theme="dark"] .badge * {
+    box-sizing: border-box;
+}
+
+/* RED = overdue / high priority / rejected */
+body[data-theme="dark"] .badge.badge-red,
+body[data-theme="dark"] .badge.badge-red:hover,
+body[data-theme="dark"] .badge.badge-red:focus,
+body[data-theme="dark"] .badge.badge-red:active {
+    background: #dc2626 !important;
+    background-color: #dc2626 !important;
+    color: #ffffff !important;
+    border: 1px solid #ff5a5a !important;
+    box-shadow: 0 0 10px rgba(220, 38, 38, 0.35) !important;
+    opacity: 1 !important;
+}
+
+/* GREEN = completed / accepted / safe deadline */
+body[data-theme="dark"] .badge.badge-green,
+body[data-theme="dark"] .badge.badge-green:hover,
+body[data-theme="dark"] .badge.badge-green:focus,
+body[data-theme="dark"] .badge.badge-green:active {
+    background: #16a34a !important;
+    background-color: #16a34a !important;
+    color: #ffffff !important;
+    border: 1px solid #4ade80 !important;
+    box-shadow: 0 0 10px rgba(22, 163, 74, 0.35) !important;
+    opacity: 1 !important;
+}
+
+/* YELLOW = medium priority / due soon */
+body[data-theme="dark"] .badge.badge-yellow,
+body[data-theme="dark"] .badge.badge-yellow:hover,
+body[data-theme="dark"] .badge.badge-yellow:focus,
+body[data-theme="dark"] .badge.badge-yellow:active {
+    background: #eab308 !important;
+    background-color: #eab308 !important;
+    color: #111827 !important;
+    border: 1px solid #fde047 !important;
+    box-shadow: 0 0 10px rgba(234, 179, 8, 0.35) !important;
+    opacity: 1 !important;
+}
+
+/* ORANGE = warning / intermediate deadline */
+body[data-theme="dark"] .badge.badge-orange,
+body[data-theme="dark"] .badge.badge-orange:hover,
+body[data-theme="dark"] .badge.badge-orange:focus,
+body[data-theme="dark"] .badge.badge-orange:active {
+    background: #f97316 !important;
+    background-color: #f97316 !important;
+    color: #ffffff !important;
+    border: 1px solid #fb923c !important;
+    box-shadow: 0 0 10px rgba(249, 115, 22, 0.35) !important;
+    opacity: 1 !important;
+}
+
+/* BLUE = neutral / informational */
+body[data-theme="dark"] .badge.badge-blue,
+body[data-theme="dark"] .badge.badge-blue:hover,
+body[data-theme="dark"] .badge.badge-blue:focus,
+body[data-theme="dark"] .badge.badge-blue:active {
+    background: #2563eb !important;
+    background-color: #2563eb !important;
+    color: #ffffff !important;
+    border: 1px solid #60a5fa !important;
+    box-shadow: 0 0 10px rgba(37, 99, 235, 0.35) !important;
+    opacity: 1 !important;
+}
+
+/* PINK = special / active research information */
+body[data-theme="dark"] .badge.badge-pink,
+body[data-theme="dark"] .badge.badge-pink:hover,
+body[data-theme="dark"] .badge.badge-pink:focus,
+body[data-theme="dark"] .badge.badge-pink:active {
+    background: #db2777 !important;
+    background-color: #db2777 !important;
+    color: #ffffff !important;
+    border: 1px solid #f472b6 !important;
+    box-shadow: 0 0 10px rgba(219, 39, 119, 0.35) !important;
+    opacity: 1 !important;
+}
+
+/* Make all badge text visible */
+body[data-theme="dark"] .badge {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-height: 28px !important;
+    padding: 5px 11px !important;
+    border-radius: 999px !important;
+    font-weight: 800 !important;
+    line-height: 1.2 !important;
+    text-shadow: none !important;
+    -webkit-text-fill-color: currentColor !important;
+}
+
+/* Dashboard deadline badges */
+body[data-theme="dark"] #dashboardDeadlines .badge,
+body[data-theme="dark"] .deadline-item .badge,
+body[data-theme="dark"] .deadline-meta .badge {
+    color: #ffffff !important;
+    opacity: 1 !important;
+}
+
+/* Research Library badges */
+body[data-theme="dark"] table .badge,
+body[data-theme="dark"] .research-table .badge,
+body[data-theme="dark"] .library-table .badge,
+body[data-theme="dark"] .data-table .badge {
+    opacity: 1 !important;
+    filter: none !important;
+}
+
+/* Never allow a white overlay/pseudo-element on badges */
+body[data-theme="dark"] .badge::before,
+body[data-theme="dark"] .badge::after {
+    background: transparent !important;
+    background-color: transparent !important;
+    opacity: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Explicit semantic fallback colors */
+body[data-theme="dark"] .badge[class*="red"] {
+    background-color: #dc2626 !important;
+    color: #ffffff !important;
+}
+
+body[data-theme="dark"] .badge[class*="green"] {
+    background-color: #16a34a !important;
+    color: #ffffff !important;
+}
+
+body[data-theme="dark"] .badge[class*="yellow"] {
+    background-color: #eab308 !important;
+    color: #111827 !important;
+}
+
+body[data-theme="dark"] .badge[class*="orange"] {
+    background-color: #f97316 !important;
+    color: #ffffff !important;
+}
+
