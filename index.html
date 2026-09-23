@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Research Tracker for managing research papers, publication deadlines, authors, journals and publishers.">
+    <title>Research Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="app">
+
+    <!-- Sidebar -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-header">
+            <div class="brand-mark">RT</div>
+            <div class="brand-text">
+                <strong>Research</strong>
+                <span>Tracker</span>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav">
+
+            <button class="nav-item active" type="button" data-section="dashboard">
+                <span class="nav-icon">◆</span>
+                <span>Dashboard</span>
+            </button>
+
+            <button class="nav-item" type="button" data-section="library">
+                <span class="nav-icon">▣</span>
+                <span>Research Library</span>
+            </button>
+
+            <button class="nav-item" type="button" data-section="authors">
+                <span class="nav-icon">●</span>
+                <span>Authors</span>
+            </button>
+
+            <button class="nav-item" type="button" data-section="journals">
+                <span class="nav-icon">◇</span>
+                <span>Journals</span>
+            </button>
+
+            <button class="nav-item" type="button" data-section="publishers">
+                <span class="nav-icon">▤</span>
+                <span>Publishers</span>
+            </button>
+
+            <button class="nav-item" type="button" data-section="calendar">
+                <span class="nav-icon">□</span>
+                <span>Calendar</span>
+            </button>
+
+            <button class="nav-item" type="button" data-section="analytics">
+                <span class="nav-icon">▥</span>
+                <span>Analytics</span>
+            </button>
+
+            <button class="nav-item" type="button" data-section="settings">
+                <span class="nav-icon">⚙</span>
+                <span>Settings</span>
+            </button>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <div class="sidebar-status">
+                <span class="status-dot"></span>
+                <span>Research system active</span>
+            </div>
+        </div>
+
+    </aside>
+
+    <!-- Main wrapper -->
+    <div class="main-wrapper">
+
+        <!-- Top bar -->
+        <header class="topbar">
+
+            <div class="topbar-left">
+                <button
+                    class="mobile-menu"
+                    id="mobileMenu"
+                    type="button"
+                    aria-label="Open menu"
+                    aria-expanded="false">
+                    ☰
+                </button>
+
+                <div class="topbar-title">
+                    <span class="topbar-label">Research Management</span>
+                    <strong id="topbarPageTitle">Dashboard</strong>
+                </div>
+            </div>
+
+            <div class="topbar-search">
+                <div class="global-search">
+                    <span class="search-icon">⌕</span>
+                    <input
+                        id="globalSearch"
+                        type="search"
+                        placeholder="Search research..."
+                        autocomplete="off">
+                </div>
+            </div>
+
+        </header>
+
+        <!-- Main content -->
+        <main class="main-content">
+
+            <!-- Dashboard -->
+            <section
+                class="page-section active"
+                id="dashboard"
+                data-section-panel="dashboard">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">Research command center</span>
+                        <h1>Dashboard</h1>
+                        <p>Monitor your research pipeline, deadlines and publication activity.</p>
+                    </div>
+
+                    <button
+                        class="primary-button"
+                        id="addResearchDashboard"
+                        type="button">
+                        + Add Research
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <div class="stats-grid">
+
+                    <div class="stat-card stat-blue">
+                        <div class="stat-card-top">
+                            <span>Total Research</span>
+                            <span class="stat-symbol">01</span>
+                        </div>
+                        <strong id="totalResearch">0</strong>
+                        <small>All tracked research records</small>
+                    </div>
+
+                    <div class="stat-card stat-yellow">
+                        <div class="stat-card-top">
+                            <span>Working</span>
+                            <span class="stat-symbol">02</span>
+                        </div>
+                        <strong id="workingResearch">0</strong>
+                        <small>Currently active research</small>
+                    </div>
+
+                    <div class="stat-card stat-green">
+                        <div class="stat-card-top">
+                            <span>Accepted</span>
+                            <span class="stat-symbol">03</span>
+                        </div>
+                        <strong id="acceptedResearch">0</strong>
+                        <small>Accepted proposals</small>
+                    </div>
+
+                    <div class="stat-card stat-red">
+                        <div class="stat-card-top">
+                            <span>Upcoming</span>
+                            <span class="stat-symbol">04</span>
+                        </div>
+                        <strong id="upcomingResearch">0</strong>
+                        <small>Upcoming deadlines</small>
+                    </div>
+
+                </div>
+
+                <!-- Pipeline -->
+                <div class="dashboard-grid">
+
+                    <div class="panel pipeline-panel">
+                        <div class="panel-header">
+                            <div>
+                                <span class="panel-kicker">Overview</span>
+                                <h2>Research pipeline</h2>
+                            </div>
+                        </div>
+
+                        <div id="dashboardPipeline" class="pipeline-content"></div>
+                    </div>
+
+                    <div class="panel deadlines-panel">
+                        <div class="panel-header">
+                            <div>
+                                <span class="panel-kicker">Attention</span>
+                                <h2>Upcoming deadlines</h2>
+                            </div>
+                        </div>
+
+                        <div id="dashboardDeadlines" class="deadline-list"></div>
+                    </div>
+
+                </div>
+
+                <!-- Charts -->
+                <div class="dashboard-grid">
+
+                    <div class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <span class="panel-kicker">Distribution</span>
+                                <h2>Status</h2>
+                            </div>
+                        </div>
+
+                        <div
+                            id="dashboardStatusChart"
+                            class="chart-container">
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-header">
+                            <div>
+                                <span class="panel-kicker">Distribution</span>
+                                <h2>Priority</h2>
+                            </div>
+                        </div>
+
+                        <div
+                            id="dashboardPriorityChart"
+                            class="chart-container">
+                        </div>
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Research Library -->
+            <section
+                class="page-section"
+                id="library"
+                data-section-panel="library">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">Research database</span>
+                        <h1>Research Library</h1>
+                        <p>Search, filter and manage all research records.</p>
+                    </div>
+
+                    <button
+                        class="primary-button"
+                        id="addResearchLibrary"
+                        type="button">
+                        + Add Research
+                    </button>
+                </div>
+
+                <div class="panel">
+
+                    <div class="library-toolbar">
+
+                        <div class="toolbar-search">
+                            <input
+                                id="librarySearch"
+                                type="search"
+                                placeholder="Search title, publisher, topic...">
+                        </div>
+
+                        <select id="statusFilter">
+                            <option value="">All Statuses</option>
+                            <option value="Working">Working</option>
+                            <option value="Accepted">Accepted</option>
+                            <option value="Submitted">Submitted</option>
+                            <option value="Published">Published</option>
+                        </select>
+
+                        <select id="priorityFilter">
+                            <option value="">All Priorities</option>
+                            <option value="High">High</option>
+                            <option value="Medium">Medium</option>
+                            <option value="Low">Low</option>
+                        </select>
+
+                        <select id="actionFilter">
+                            <option value="">All Actions</option>
+                            <option value="Proposal Submitted">Proposal Submitted</option>
+                            <option value="Proposal Accepted">Proposal Accepted</option>
+                        </select>
+
+                        <select id="sortLibrary">
+                            <option value="deadlineAsc">Deadline: Earliest</option>
+                            <option value="deadlineDesc">Deadline: Latest</option>
+                            <option value="titleAsc">Title: A-Z</option>
+                            <option value="titleDesc">Title: Z-A</option>
+                            <option value="priority">Priority</option>
+                        </select>
+
+                        <button
+                            class="secondary-button"
+                            id="clearFilters"
+                            type="button">
+                            Clear
+                        </button>
+
+                    </div>
+
+                    <div class="library-summary">
+                        <span>
+                            Showing
+                            <strong id="libraryCount">0</strong>
+                            research records
+                        </span>
+                    </div>
+
+                    <div class="table-wrapper">
+
+                        <table class="research-table">
+
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Research title</th>
+                                    <th>Publisher</th>
+                                    <th>Type</th>
+                                    <th>Priority</th>
+                                    <th>Status</th>
+                                    <th>Deadline</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+
+                            <tbody id="researchTableBody"></tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Authors -->
+            <section
+                class="page-section"
+                id="authors"
+                data-section-panel="authors">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">People</span>
+                        <h1>Authors</h1>
+                        <p>Research authors and contributor information.</p>
+                    </div>
+                </div>
+
+                <div
+                    id="authorsContent"
+                    class="content-grid">
+                </div>
+
+            </section>
+
+
+            <!-- Journals -->
+            <section
+                class="page-section"
+                id="journals"
+                data-section-panel="journals">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">Publication channels</span>
+                        <h1>Journals</h1>
+                        <p>Track journals and publication-related information.</p>
+                    </div>
+                </div>
+
+                <div
+                    id="journalsContent"
+                    class="content-grid">
+                </div>
+
+            </section>
+
+
+            <!-- Publishers -->
+            <section
+                class="page-section"
+                id="publishers"
+                data-section-panel="publishers">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">Publishing ecosystem</span>
+                        <h1>Publishers</h1>
+                        <p>Track publishers associated with your research.</p>
+                    </div>
+                </div>
+
+                <div
+                    id="publishersContent"
+                    class="content-grid">
+                </div>
+
+            </section>
+
+
+            <!-- Calendar -->
+            <section
+                class="page-section"
+                id="calendar"
+                data-section-panel="calendar">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">Deadlines</span>
+                        <h1>Research Calendar</h1>
+                        <p>View research deadlines by date.</p>
+                    </div>
+                </div>
+
+                <div class="panel">
+
+                    <div class="calendar-toolbar">
+
+                        <button
+                            class="secondary-button"
+                            id="calendarPrevious"
+                            type="button">
+                            ← Previous
+                        </button>
+
+                        <button
+                            class="secondary-button"
+                            id="calendarToday"
+                            type="button">
+                            Today
+                        </button>
+
+                        <button
+                            class="secondary-button"
+                            id="calendarNext"
+                            type="button">
+                            Next →
+                        </button>
+
+                    </div>
+
+                    <div
+                        id="calendarContent"
+                        class="calendar-content">
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- Analytics -->
+            <section
+                class="page-section"
+                id="analytics"
+                data-section-panel="analytics">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">Research intelligence</span>
+                        <h1>Analytics</h1>
+                        <p>Understand research activity, deadlines and publication trends.</p>
+                    </div>
+                </div>
+
+                <div
+                    id="analyticsContent"
+                    class="analytics-content">
+                </div>
+
+            </section>
+
+
+            <!-- Settings -->
+            <section
+                class="page-section"
+                id="settings"
+                data-section-panel="settings">
+
+                <div class="page-heading">
+                    <div>
+                        <span class="eyebrow">System controls</span>
+                        <h1>Settings</h1>
+                        <p>Manage your research data and dashboard preferences.</p>
+                    </div>
+                </div>
+
+                <div class="settings-grid">
+
+                    <div class="panel settings-card">
+
+                        <div class="panel-header">
+                            <div>
+                                <span class="panel-kicker">Data</span>
+                                <h2>Data management</h2>
+                            </div>
+                        </div>
+
+                        <div class="settings-actions">
+
+                            <button
+                                class="settings-button blue-action"
+                                id="exportJSON"
+                                type="button">
+                                Export JSON
+                            </button>
+
+                            <button
+                                class="settings-button green-action"
+                                id="exportCSV"
+                                type="button">
+                                Export CSV
+                            </button>
+
+                            <button
+                                class="settings-button yellow-action"
+                                id="importJSON"
+                                type="button">
+                                Import JSON
+                            </button>
+
+                            <input
+                                type="file"
+                                id="importFile"
+                                accept=".json,application/json"
+                                hidden>
+
+                            <button
+                                class="settings-button green-action"
+                                id="restoreSeed"
+                                type="button">
+                                Restore Seed Data
+                            </button>
+
+                            <button
+                                class="settings-button red-action"
+                                id="deleteAllData"
+                                type="button">
+                                Delete All Data
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="panel settings-card">
+
+                        <div class="panel-header">
+                            <div>
+                                <span class="panel-kicker">Appearance</span>
+                                <h2>Theme</h2>
+                            </div>
+                        </div>
+
+                        <div class="theme-options">
+
+                            <button
+                                class="theme-choice blue-theme-choice"
+                                type="button"
+                                data-theme-choice="blue">
+                                <span></span>
+                                Blue
+                            </button>
+
+                            <button
+                                class="theme-choice red-theme-choice"
+                                type="button"
+                                data-theme-choice="red">
+                                <span></span>
+                                Red
+                            </button>
+
+                            <button
+                                class="theme-choice green-theme-choice"
+                                type="button"
+                                data-theme-choice="green">
+                                <span></span>
+                                Green
+                            </button>
+
+                            <button
+                                class="theme-choice yellow-theme-choice"
+                                type="button"
+                                data-theme-choice="yellow">
+                                <span></span>
+                                Yellow
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="main-footer">
+            <span>Research Tracker</span>
+            <span>Research management dashboard</span>
+        </footer>
+
+    </div>
+
+</div>
+
+
+<!-- Research Form Modal -->
+<div
+    class="modal"
+    id="researchModal"
+    aria-hidden="true">
+
+    <div class="modal-overlay"></div>
+
+    <div class="modal-dialog">
+
+        <div class="modal-header">
+
+            <div>
+                <span class="modal-kicker">Research record</span>
+                <h2 id="researchModalTitle">Add Research</h2>
+            </div>
+
+            <button
+                class="modal-close"
+                type="button"
+                data-close-modal="researchModal"
+                aria-label="Close">
+                ×
+            </button>
+
+        </div>
+
+        <form id="researchForm">
+
+            <input
+                type="hidden"
+                id="researchId">
+
+            <div class="form-grid">
+
+                <div class="form-field form-field-wide">
+                    <label for="researchTitle">Research title</label>
+                    <input
+                        id="researchTitle"
+                        type="text"
+                        required>
+                </div>
+
+                <div class="form-field">
+                    <label for="researchAssociation">Publisher / Association</label>
+                    <input
+                        id="researchAssociation"
+                        type="text">
+                </div>
+
+                <div class="form-field">
+                    <label for="researchPublicationType">Publication type</label>
+                    <select id="researchPublicationType">
+                        <option value="Edited Book Chapter">Edited Book Chapter</option>
+                        <option value="Journal Article">Journal Article</option>
+                        <option value="Conference Paper">Conference Paper</option>
+                        <option value="Book">Book</option>
+                        <option value="Working Paper">Working Paper</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="researchPriority">Priority</label>
+                    <select id="researchPriority">
+                        <option value="High">High</option>
+                        <option value="Medium">Medium</option>
+                        <option value="Low">Low</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="researchAction">Current action</label>
+                    <input
+                        id="researchAction"
+                        type="text"
+                        placeholder="Proposal Submitted">
+                </div>
+
+                <div class="form-field">
+                    <label for="researchStatus">Status</label>
+                    <select id="researchStatus">
+                        <option value="Working">Working</option>
+                        <option value="Accepted">Accepted</option>
+                        <option value="Submitted">Submitted</option>
+                        <option value="Published">Published</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label for="researchReminder">Reminder date</label>
+                    <input
+                        id="researchReminder"
+                        type="date">
+                </div>
+
+                <div class="form-field">
+                    <label for="researchProposalDeadline">Proposal deadline</label>
+                    <input
+                        id="researchProposalDeadline"
+                        type="date">
+                </div>
+
+                <div class="form-field">
+                    <label for="researchFullPaperDeadline">Full paper deadline</label>
+                    <input
+                        id="researchFullPaperDeadline"
+                        type="date">
+                </div>
+
+                <div class="form-field form-field-wide">
+                    <label for="researchCallForPaperLink">Call for Papers link</label>
+                    <input
+                        id="researchCallForPaperLink"
+                        type="url"
+                        placeholder="https://...">
+                </div>
+
+                <div class="form-field form-field-wide">
+                    <label for="researchComments">Comments</label>
+                    <textarea
+                        id="researchComments"
+                        rows="5"
+                        placeholder="Notes, submission details, follow-up actions..."></textarea>
+                </div>
+
+            </div>
+
+            <div class="modal-footer">
+
+                <button
+                    class="secondary-button"
+                    type="button"
+                    data-close-modal="researchModal">
+                    Cancel
+                </button>
+
+                <button
+                    class="primary-button"
+                    type="submit">
+                    Save Research
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</div>
+
+
+<!-- Research Details Modal -->
+<div
+    class="modal"
+    id="detailModal"
+    aria-hidden="true">
+
+    <div class="modal-overlay"></div>
+
+    <div class="modal-dialog detail-dialog">
+
+        <div class="modal-header">
+
+            <div>
+                <span class="modal-kicker">Research information</span>
+                <h2 id="detailModalTitle">Research Details</h2>
+            </div>
+
+            <button
+                class="modal-close"
+                type="button"
+                data-close-modal="detailModal"
+                aria-label="Close">
+                ×
+            </button>
+
+        </div>
+
+        <div
+            id="detailModalContent"
+            class="detail-content">
+        </div>
+
+        <div class="modal-footer">
+
+            <button
+                class="secondary-button"
+                type="button"
+                data-close-modal="detailModal">
+                Close
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- Toast notifications -->
+<div
+    id="toastContainer"
+    class="toast-container"
+    aria-live="polite">
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
